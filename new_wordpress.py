@@ -1,8 +1,10 @@
 import os
+from unicodedata import name
 from dotenv import load_dotenv
-os.system('curl yoururl.com')
+import shutil
 # #parametros para la creacion del wordpress
-NAME="$1"
+
+NAME="borrar"
 # PASSWORD="$2"
 # SOURCE="${3:-generic}"
 PORT=80
@@ -17,16 +19,20 @@ if (int(os.getenv('ENPRODUCCION')) > 0):
 #      -H "X-Auth-Key: $KEY" \
 #      -H "Content-Type: application/json" \
 #      --data '{"type":"A","name":"'$NAME'","content":"'$IP'","ttl":3600,"priority":10,"proxied":true}'
-#     port=80
+    port=80
 
 else:
     opval=("http://localhost:"+os.getenv('EMAIL'))
     print(opval)
-    # server="_"
-    # port=$PORT
+    server="_"
+    port=PORT
 # #creamos el dns
 # #Sacar las URL, EMAIL, KEY, IP para que estén envvars.sh y acá usar las variables
-# cp $MMHOME/wpclone/origin /etc/nginx/sites-available/${NAME}
+
+shutil.copy(f"{os.getenv('MMHOME')}/wpclone/origin", f"/etc/nginx/sites-available/{name}")
+
+
+ 
 # sed -i "s/{{port}}/$PORT/g" /etc/nginx/sites-available/${NAME}
 # sed -i "s/{{origin}}/$NAME/g" /etc/nginx/sites-available/${NAME}
 # sed -i "s/{{server_name}}/$server/g" /etc/nginx/sites-available/${NAME}
