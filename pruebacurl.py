@@ -1,3 +1,5 @@
 import os
 from dotenv import load_dotenv
-os.system('curl yoururl.com')s
+os.system('curl yoururl.com')
+#curl -X POST "https://api.cloudflare.com/client/v4/zones/00509807996f64ff48b75c82936f0777/dns_records"  -H "X-Auth-Email: pruebaoraclecloud@gmail.com" -H "X-Auth-Key: 3cffda0574248ed95108e39e89a37c75dfba6" -H "Content-Type: application/json"  --data '{"type":"A","name":"pruebaborrar16mar2","content":"54.208.136.12","ttl":3600,"priority":10,"proxied":true}'
+os.system('curl -X POST "https://api.cloudflare.com/client/v4/zones/00509807996f64ff48b75c82936f0777/dns_records"  -H "X-Auth-Email: pruebaoraclecloud@gmail.com" -H "X-Auth-Key: 3cffda0574248ed95108e39e89a37c75dfba6" -H "Content-Type: application/json"  --data '{"type":"A","name":"pruebaborrar16mar5","content":"54.208.136.12","ttl":3600,"priority":10,"proxied":true}'')

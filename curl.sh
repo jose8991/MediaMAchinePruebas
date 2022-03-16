@@ -1,0 +1,1 @@
+curl -X POST "https://api.cloudflare.com/client/v4/zones/$ID_DNS/dns_records"  -H "X-Auth-Email: $EMAIL" -H "X-Auth-Key: $KEY" -H "Content-Type: application/json"  --data '{"type":"A","name":"pruebaborrar16mar2","content":"'$IP'","ttl":3600,"priority":10,"proxied":true}'
