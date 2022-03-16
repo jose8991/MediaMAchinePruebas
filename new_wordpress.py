@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-
+os.system('curl yoururl.com')
 # #parametros para la creacion del wordpress
 NAME="$1"
 # PASSWORD="$2"
