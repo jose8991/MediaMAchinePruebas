@@ -3,17 +3,20 @@ import os
 from dotenv import load_dotenv
 # import shutil
 a="jose"
+NAME="PRUEBA"
 with open('/etc/nginx/sites-available/b', 'r') as file :
   filedata = file.read()
 
 # Replace the target stringch
-filedata = filedata.replace(a, os.getenv('DOMAIN'))
+filedata = filedata.replace('markingall.com', os.getenv('DOMAIN'))
 filedata = filedata.replace('{{origin}}', '80')
-filedata = filedata.replace('{{server_name}}', '80')
+filedata = filedata.replace('{{server_name}}', 'prueba')
 # Write the file out again
 with open('/etc/nginx/sites-available/b', 'w') as file:
   file.write(filedata)
 
+a=(f'/etc/nginx/sites-available/{NAME}')
+print(a)
 
 
 # sed -i "s/{{port}}/$PORT/g" /etc/nginx/sites-available/${NAME}

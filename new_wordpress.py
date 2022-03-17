@@ -5,7 +5,7 @@ import shutil
 # #parametros para la creacion del wordpress
 
 NAME="borrar"
-# PASSWORD="$2"
+PASSWORD="$2"
 # SOURCE="${3:-generic}"
 PORT=80
 # BLOGNAME="${6:-TituloGenerico}"
@@ -29,9 +29,18 @@ else:
 # #creamos el dns
 # #Sacar las URL, EMAIL, KEY, IP para que estén envvars.sh y acá usar las variables
 
-shutil.copy(f"{os.getenv('MMHOME')}/wpclone/origin", f"/etc/nginx/sites-available/{name}")
+shutil.copy(f"{os.getenv('MMHOME')}/wpclone/origin", f"/etc/nginx/sites-available/{NAME}")
 
+with open(f'/etc/nginx/sites-available/{NAME}', 'r') as file :
+  filedata = file.read()
 
+# Replace the target stringch
+filedata = filedata.replace('{{port}}', PORT)
+filedata = filedata.replace('{{origin}}', NAME)
+filedata = filedata.replace('{{server_name}}', server)
+# Write the file out again
+with open(f'/etc/nginx/sites-available/{NAME}', 'w') as file:
+  file.write(filedata)
  
 # sed -i "s/{{port}}/$PORT/g" /etc/nginx/sites-available/${NAME}
 # sed -i "s/{{origin}}/$NAME/g" /etc/nginx/sites-available/${NAME}
@@ -67,8 +76,16 @@ shutil.copy(f"{os.getenv('MMHOME')}/wpclone/origin", f"/etc/nginx/sites-availabl
 # sudo find /var/www/${NAME} -type f -exec chmod 0644 {} \;
 # chown -R www-data.www-data /var/www/${NAME}/
 
-# sed -i "s/database_name_here/$NAME/g" /var/www/${NAME}/wp-config.php
-# sed -i "s/username_here/$NAME/g" /var/www/${NAME}/wp-config.php
-# sed -i "s/password_here/$PASSWORD/g" /var/www/${NAME}/wp-config.php
+with open(f'/var/www/${NAME}/wp-config.php', 'r') as file :
+  filedata = file.read()
+
+# Replace the target stringch
+filedata = filedata.replace('database_name_here', NAME)
+filedata = filedata.replace('username_here', NAME)
+filedata = filedata.replace('password_here', PASSWORD)
+# Write the file out again
+with open(f'/etc/nginx/sites-available/{NAME}', 'w') as file:
+  file.write(filedata)
+
 
 
