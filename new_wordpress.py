@@ -1,19 +1,29 @@
-import os
+import os, sys, stat
 from unicodedata import name
 from dotenv import load_dotenv
 import shutil
-# #parametros para la creacion del wordpress
+import requests
+from requests.structures import CaseInsensitiveDict
+import mysql.connector
 
-NAME="borrar"
-PASSWORD="$2"
-# SOURCE="${3:-generic}"
-PORT=80
-# BLOGNAME="${6:-TituloGenerico}"
-# BLOGDESC="${7:-descripcionGenerica}"
+NAME="borrarfinaltest4"
+PASSWORD="Jose123-"
+SOURCE="generic"
+PORT="80"
+BLOGNAME="TituloGenerico"
+BLOGDESC="descripcionGenerica"
+#conexion = mysql.connector.connect(user=os.getenv('WP_DB_USER'), password=os.getenv('WP_DB_PWD'), host=os.getenv('WP_DB_HOST'))
+url = f"https://api.cloudflare.com/client/v4/zones/{os.getenv('ID_DNS')}/dns_records"
+headers = CaseInsensitiveDict()
+headers["X-Auth-Email"] = os.getenv('EMAIL')
+headers["X-Auth-Key"] = os.getenv('KEY')
+headers["Content-Type"] = "application/json"
+data = '{"type":"A","name":"pruebadesdepyth3on","content":"54.208.136.12","ttl":3600,"priority":10,"proxied":true}'
 
 if (int(os.getenv('ENPRODUCCION')) > 0):
     server=(f"{NAME}.{os.getenv('DOMAIN')}") 
     opval=(f"https://{server}")
+    resp = requests.post(url, headers=headers, data=data)
 #     curl -X POST "https://api.cloudflare.com/client/v4/zones/$ID_DNS/dns_records" \
 #      -H "X-Auth-Email: $EMAIL" \
 #      -H "X-Auth-Key: $KEY" \
@@ -31,10 +41,8 @@ else:
 
 shutil.copy(f"{os.getenv('MMHOME')}/wpclone/origin", f"/etc/nginx/sites-available/{NAME}")
 
-with open(f'/etc/nginx/sites-available/{NAME}', 'r') as file :
+with open(f"/etc/nginx/sites-available/{NAME}", 'r') as file :
   filedata = file.read()
-
-# Replace the target stringch
 filedata = filedata.replace('{{port}}', PORT)
 filedata = filedata.replace('{{origin}}', NAME)
 filedata = filedata.replace('{{server_name}}', server)
@@ -42,41 +50,55 @@ filedata = filedata.replace('{{server_name}}', server)
 with open(f'/etc/nginx/sites-available/{NAME}', 'w') as file:
   file.write(filedata)
  
-# sed -i "s/{{port}}/$PORT/g" /etc/nginx/sites-available/${NAME}
-# sed -i "s/{{origin}}/$NAME/g" /etc/nginx/sites-available/${NAME}
-# sed -i "s/{{server_name}}/$server/g" /etc/nginx/sites-available/${NAME}
-# ln -s /etc/nginx/sites-available/${NAME} /etc/nginx/sites-enabled/${NAME}
-# systemctl reload nginx
+
+os.system(f"ln -s /etc/nginx/sites-available/{NAME} /etc/nginx/sites-enabled/{NAME}")
+os.system("systemctl reload nginx")
+
 
 
 # #creamos la base de datos ,su usuario y le damos sus permisos
 # # Sacar las credenciales y el host (localhost en este caso) para que estén envvars.sh
 
+# curso1=conexion.cursor()
+# curso1.execute(f"CREATE DATABASE {NAME}")
+# curso1.execute(f"CREATE USER '{NAME}'@'{os.getenv('WP_DB_HOST')}' IDENTIFIED BY '{os.getenv('WP_DB_PWD')}'")
+# curso1.execute(f"GRANT ALL PRIVILEGES ON {NAME}.* TO {NAME}@{os.getenv('WP_DB_HOST')}")
+# curso1.execute("FLUSH PRIVILEGES")
+# conexion.close()  
 
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "CREATE DATABASE $NAME;"
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "CREATE USER '$NAME'@$WP_DB_HOST IDENTIFIED BY '$PASSWORD';"
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "GRANT ALL PRIVILEGES ON $NAME.* TO $NAME@$WP_DB_HOST;"
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "FLUSH PRIVILEGES;"
-
-
-# if [ $SOURCE != 'generic' ]
-# then
-# mysqldump  -u$WP_DB_USER -p$WP_DB_PWD --no-create-db $SOURCE --single-transaction --compress --order-by-primary | mysql -u$WP_DB_USER -p$WP_DB_PWD $NAME
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "UPDATE $NAME.wp_options SET option_value='$opval' WHERE option_name in ('home','siteurl');"
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "UPDATE $NAME.wp_options SET option_value='$BLOGNAME' WHERE option_name in ('blogname');"
-# mysql -u$WP_DB_USER -p$WP_DB_PWD -e "UPDATE $NAME.wp_options SET option_value='$BLOGDESC' WHERE option_name in ('blogdescription');"
-# fi
-
+if (SOURCE != 'generic'):
+  os.system(f"mysqldump  -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} --no-create-db {SOURCE} --single-transaction --compress --order-by-primary | mysql -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} {NAME}")
+  # curso2=conexion.cursor()
+  # curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{opval}' WHERE option_name in ('home','siteurl')")
+  # curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{BLOGNAME}' WHERE option_name in ('blogname')")
+  # curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{BLOGDESC}' WHERE option_name in ('blogdescription')")
 
 
-# mkdir /var/www/${NAME}
-# cp -r $MMHOME/wpclone/wordpresscontent/${SOURCE}/* /var/www/${NAME}/
-# cp -r $MMHOME/wpclone/wordpresscontent/generic/wp-config.php /var/www/${NAME}/
-# sudo find /var/www/${NAME} -type d -exec chmod 0755 {} \;
-# sudo find /var/www/${NAME} -type f -exec chmod 0644 {} \;
-# chown -R www-data.www-data /var/www/${NAME}/
+shutil.copytree(f"{os.getenv('MMHOME')}/wpclone/wordpresscontent/generic/", f"/var/www/{NAME}")
+shutil.copy(f"{os.getenv('MMHOME')}/wpclone/wordpresscontent/generic/wp-config.php", f"/var/www/{NAME}")
 
-with open(f'/var/www/${NAME}/wp-config.php', 'r') as file :
+
+os.system(f"chown -R www-data.www-data /var/www/{NAME}/")
+#permisos
+ruta_a_explorar=f"//var/www/{NAME}/"
+ 
+for root,dirs,files in os.walk(ruta_a_explorar):
+        for file in [f for f in files]:
+                pp=os.path.join(root, file).replace("""\\""",'/')
+                if stat.S_ISDIR(os.stat(pp)[stat.ST_MODE]):
+                        os.chmod(pp,stat.S_IRWXU|stat.S_IWUSR|stat.S_IRGRP|stat.S_IXGRP|stat.S_IROTH|stat.S_IXOTH)
+                elif stat.S_ISREG(os.stat(pp)[stat.ST_MODE]):
+                        os.chmod(pp,stat.S_IRUSR|stat.S_IWUSR|stat.S_IRGRP|stat.S_IROTH)
+ 
+        for dir in [f for f in dirs]:
+                pp=os.path.join(root, dir).replace("""\\""",'/')
+                print (pp)
+                if stat.S_ISDIR(os.stat(pp)[stat.ST_MODE]):
+                        os.chmod(pp,stat.S_IRWXU|stat.S_IWUSR|stat.S_IRGRP|stat.S_IXGRP|stat.S_IROTH|stat.S_IXOTH)
+                elif stat.S_ISREG(os.stat(pp)[stat.ST_MODE]):
+                        os.chmod(pp,stat.S_IRUSR|stat.S_IWUSR|stat.S_IRGRP|stat.S_IROTH)
+
+with open(f'/var/www/{NAME}/wp-config.php', 'r') as file :
   filedata = file.read()
 
 # Replace the target stringch
@@ -84,7 +106,7 @@ filedata = filedata.replace('database_name_here', NAME)
 filedata = filedata.replace('username_here', NAME)
 filedata = filedata.replace('password_here', PASSWORD)
 # Write the file out again
-with open(f'/etc/nginx/sites-available/{NAME}', 'w') as file:
+with open(f'/var/www/{NAME}/wp-config.php', 'w') as file:
   file.write(filedata)
 
 
