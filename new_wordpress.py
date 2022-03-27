@@ -18,17 +18,12 @@ headers = CaseInsensitiveDict()
 headers["X-Auth-Email"] = os.getenv('EMAIL')
 headers["X-Auth-Key"] = os.getenv('KEY')
 headers["Content-Type"] = "application/json"
-data = '{"type":"A","name":"pruebadesdepyth3on","content":"54.208.136.12","ttl":3600,"priority":10,"proxied":true}'
+data = f"""{{"type":"A","name":"{NAME}","content":"54.208.136.12","ttl":3600,"priority":10,"proxied":true}}"""
 
 if (int(os.getenv('ENPRODUCCION')) > 0):
     server=(f"{NAME}.{os.getenv('DOMAIN')}") 
     opval=(f"https://{server}")
     resp = requests.post(url, headers=headers, data=data)
-#     curl -X POST "https://api.cloudflare.com/client/v4/zones/$ID_DNS/dns_records" \
-#      -H "X-Auth-Email: $EMAIL" \
-#      -H "X-Auth-Key: $KEY" \
-#      -H "Content-Type: application/json" \
-#      --data '{"type":"A","name":"'$NAME'","content":"'$IP'","ttl":3600,"priority":10,"proxied":true}'
     port=80
 
 else:
@@ -108,6 +103,4 @@ filedata = filedata.replace('password_here', PASSWORD)
 # Write the file out again
 with open(f'/var/www/{NAME}/wp-config.php', 'w') as file:
   file.write(filedata)
-
-
 
