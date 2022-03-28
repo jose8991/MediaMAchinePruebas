@@ -6,7 +6,7 @@ import requests
 from requests.structures import CaseInsensitiveDict
 import mysql.connector
 
-NAME="borrarfinaltest4"
+NAME="borrarfinaltest11"
 PASSWORD="Jose123-"
 SOURCE="generic"
 PORT="80"
@@ -18,7 +18,7 @@ headers = CaseInsensitiveDict()
 headers["X-Auth-Email"] = os.getenv('EMAIL')
 headers["X-Auth-Key"] = os.getenv('KEY')
 headers["Content-Type"] = "application/json"
-data = f"""{{"type":"A","name":"{NAME}","content":"54.208.136.12","ttl":3600,"priority":10,"proxied":true}}"""
+data = f"""{{"type":"A","name":"{NAME}","content":"{os.getenv('IP')}","ttl":3600,"priority":10,"proxied":true}}"""
 
 if (int(os.getenv('ENPRODUCCION')) > 0):
     server=(f"{NAME}.{os.getenv('DOMAIN')}") 
@@ -62,7 +62,8 @@ os.system("systemctl reload nginx")
 # conexion.close()  
 
 if (SOURCE != 'generic'):
-  os.system(f"mysqldump  -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} --no-create-db {SOURCE} --single-transaction --compress --order-by-primary | mysql -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} {NAME}")
+  pass
+  #os.system(f"mysqldump  -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} --no-create-db {SOURCE} --single-transaction --compress --order-by-primary | mysql -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} {NAME}")
   # curso2=conexion.cursor()
   # curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{opval}' WHERE option_name in ('home','siteurl')")
   # curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{BLOGNAME}' WHERE option_name in ('blogname')")
