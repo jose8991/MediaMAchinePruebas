@@ -10,6 +10,7 @@ ufw allow 22/tcp
 ufw allow 80/tcp
 ufw allow 3306/tcp
 ufw allow 5000/tcp
+pip install pandas
 echo "y" | ufw enable
 apt-get install php-fpm -y
 apt-get install mysql-server php-mysql -y
