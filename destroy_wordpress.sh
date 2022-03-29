@@ -34,7 +34,7 @@ do
         VariableId=$(echo $VariableId | tr -d '"')
         echo $VariableId
         #eliminamos el dns
-        #curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$ID_DNS/dns_records/$VariableId"  -H "X-Auth-Email: $EMAIL"  -H "X-Auth-Key: $KEY"  -H "Content-Type: application/json"
+        curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$ID_DNS/dns_records/$VariableId"  -H "X-Auth-Email: $EMAIL"  -H "X-Auth-Key: $KEY"  -H "Content-Type: application/json"
         #eliminamos los archivos de la carpetas de nginx
         rm $ficheroa/$nametodelete
         rm $ficheroe/$nametodelete    

@@ -1,0 +1,754 @@
+{
+  "result": [
+    {
+      "id": "35d91b8ac788b3287b5e7091fa05ac21",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "anjoss.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-26T01:44:57.007986Z",
+      "modified_on": "2022-02-26T01:44:57.007986Z"
+    },
+    {
+      "id": "8cf54958885fdbd8d87164219a9f4e79",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "anti.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-23T21:34:34.844528Z",
+      "modified_on": "2022-01-23T21:34:34.844528Z"
+    },
+    {
+      "id": "e90594a1e39d0e4f150bfc4e64da51ea",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "arg.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-23T21:34:04.976813Z",
+      "modified_on": "2022-01-23T21:34:04.976813Z"
+    },
+    {
+      "id": "efffaa23a04dbc34cc92824e6c07a38a",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrar16deb1636.markingall.com",
+      "type": "A",
+      "content": "201.236.221.23",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-16T21:36:32.109998Z",
+      "modified_on": "2022-03-16T21:36:32.109998Z"
+    },
+    {
+      "id": "007c5117561c60139788a0c37effac05",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrar16demar1626.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-16T21:27:16.093749Z",
+      "modified_on": "2022-03-16T21:27:16.093749Z"
+    },
+    {
+      "id": "46bc2ca49c4ae820e2f73a7646ee1b9b",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrar21mar.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-22T01:36:08.347524Z",
+      "modified_on": "2022-03-22T01:36:08.347524Z"
+    },
+    {
+      "id": "322281297a71133fd0bfe35bdaef2c7a",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrar22prueab.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-22T01:49:38.292277Z",
+      "modified_on": "2022-03-22T01:49:38.292277Z"
+    },
+    {
+      "id": "0a2713de2709aa4e81fd10e6164f247e",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrarfinaltest11.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-28T00:07:26.41814Z",
+      "modified_on": "2022-03-28T00:07:26.41814Z"
+    },
+    {
+      "id": "f07182649d66ff9a8b34978c40c71398",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrarfinaltest5.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-27T22:48:46.726813Z",
+      "modified_on": "2022-03-27T22:48:46.726813Z"
+    },
+    {
+      "id": "93d71e090980f4336153ceac63d3ac48",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrarfinaltest6.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-27T22:50:15.771371Z",
+      "modified_on": "2022-03-27T22:50:15.771371Z"
+    },
+    {
+      "id": "3ce8e62dc67a3e25a6175f92db5d6abd",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrarfinaltest8.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-27T22:51:11.390333Z",
+      "modified_on": "2022-03-27T22:51:11.390333Z"
+    },
+    {
+      "id": "537df0b15fb6f0814f591e4e8819a54e",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrarfinaltest9.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-28T00:04:58.437106Z",
+      "modified_on": "2022-03-28T00:04:58.437106Z"
+    },
+    {
+      "id": "f4d364fe07fdc8bc5243b4941b41af01",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "borrarrrrrrrrrr.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-27T22:00:31.671647Z",
+      "modified_on": "2022-03-27T22:00:31.671647Z"
+    },
+    {
+      "id": "4b5f470938f11bd2745d67caed372418",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "col.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-04T19:34:14.980402Z",
+      "modified_on": "2022-03-04T19:34:14.980402Z"
+    },
+    {
+      "id": "f76c101b86f928f2da45905b3bedb6fc",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "eco.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-23T21:34:45.06703Z",
+      "modified_on": "2022-01-23T21:34:45.06703Z"
+    },
+    {
+      "id": "a9c1e6749a323937539e9f19616ccb05",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "finaltext.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-25T15:30:19.98519Z",
+      "modified_on": "2022-01-25T15:30:19.98519Z"
+    },
+    {
+      "id": "5fccdc7be58623d864d298b72e24299b",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "generic.markingall.com",
+      "type": "A",
+      "content": "54.85.253.163",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-26T12:30:51.502109Z",
+      "modified_on": "2022-02-26T12:30:51.502109Z"
+    },
+    {
+      "id": "c9c3a6e858bad5c1891a4b32d5a3703b",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "markingall.com",
+      "type": "A",
+      "content": "104.21.96.41",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-28T02:55:00.773815Z",
+      "modified_on": "2022-02-28T02:55:00.773815Z"
+    },
+    {
+      "id": "4223fe6ee10ed345bae495dd1fe2a095",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "markingall.com",
+      "type": "A",
+      "content": "172.67.172.252",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-28T02:55:00.7653Z",
+      "modified_on": "2022-02-28T02:55:00.7653Z"
+    },
+    {
+      "id": "87fc73abdbc564876f8e9502cb4db85e",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-25T13:35:18.122756Z",
+      "modified_on": "2022-01-25T13:35:18.122756Z"
+    },
+    {
+      "id": "74c66dfd6c16322a1f6325a4f68c6c56",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "markingall.com",
+      "type": "A",
+      "content": "144.22.153.187",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-08T03:33:27.762808Z",
+      "modified_on": "2022-01-08T03:33:27.762808Z"
+    },
+    {
+      "id": "6c4e65ed50e3fbdf418bc1ad9ef7f773",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "mateo.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-06T04:14:23.986839Z",
+      "modified_on": "2022-02-06T04:14:23.986839Z"
+    },
+    {
+      "id": "3dff7aeefc529e9fc888328668fe7b44",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "plugins.markingall.com",
+      "type": "A",
+      "content": "54.85.253.163",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-24T16:10:59.855007Z",
+      "modified_on": "2022-02-24T16:10:59.855007Z"
+    },
+    {
+      "id": "c65e16af10811ab1122241f9af0929cb",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "plugins.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-18T12:39:58.777365Z",
+      "modified_on": "2022-02-20T22:35:35.232082Z"
+    },
+    {
+      "id": "176636d002bb225332607019be6cf81d",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "pruebaborrar16mar2.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-16T19:29:20.220079Z",
+      "modified_on": "2022-03-16T19:29:20.220079Z"
+    },
+    {
+      "id": "5d2a7a3d942a86f5ea7a4029111231b8",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "pruebaborrar16mar.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-16T19:28:08.962883Z",
+      "modified_on": "2022-03-16T19:28:08.962883Z"
+    },
+    {
+      "id": "cecb53126a1975fe6b755c1ff2fdd12a",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "pruebadesdepyth3on.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-27T17:51:57.969441Z",
+      "modified_on": "2022-03-27T17:51:57.969441Z"
+    },
+    {
+      "id": "982c9a309330b28c1a0e3eea0783bb48",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "pruebadesdepython.markingall.com",
+      "type": "A",
+      "content": "54.208.136.12",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-22T01:59:01.573554Z",
+      "modified_on": "2022-03-22T01:59:01.573554Z"
+    },
+    {
+      "id": "b1f349cac225707877905d969a235f76",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "sjmlegales.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-11T22:17:37.909008Z",
+      "modified_on": "2022-02-11T22:17:37.909008Z"
+    },
+    {
+      "id": "9fec783e1643c9bf470fedb5d02fc81b",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "skate.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-06T02:58:42.039992Z",
+      "modified_on": "2022-02-06T02:58:42.039992Z"
+    },
+    {
+      "id": "277aebeb07a541e94e7d41a183891aaa",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "travelfly.markingall.com",
+      "type": "A",
+      "content": "54.175.204.140",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-03-18T18:25:14.633279Z",
+      "modified_on": "2022-03-18T18:25:14.633279Z"
+    },
+    {
+      "id": "d9d02d0e3e6999c42adecaf7ffbcf8e3",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "villaestefania.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-25T19:36:27.307418Z",
+      "modified_on": "2022-01-25T19:36:27.307418Z"
+    },
+    {
+      "id": "7032144cdf079fdf4573e35df93f0ad0",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "waves.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-11T21:28:07.362296Z",
+      "modified_on": "2022-02-11T21:28:07.362296Z"
+    },
+    {
+      "id": "7ab41e01df84d5f18395dd631f383dd9",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "wherever.markingall.com",
+      "type": "A",
+      "content": "168.138.130.105",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-27T22:53:40.772279Z",
+      "modified_on": "2022-01-27T22:53:40.772279Z"
+    },
+    {
+      "id": "2dbba78fcf682ed2c1e9e167ac08c0df",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "markingall.com",
+      "type": "AAAA",
+      "content": "2606:4700:3034::ac43:acfc",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-28T02:55:00.785035Z",
+      "modified_on": "2022-02-28T02:55:00.785035Z"
+    },
+    {
+      "id": "9b2b3bf02d3cd7ae4634b53b826e8302",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "markingall.com",
+      "type": "AAAA",
+      "content": "2606:4700:3034::6815:6029",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-02-28T02:55:00.780511Z",
+      "modified_on": "2022-02-28T02:55:00.780511Z"
+    },
+    {
+      "id": "55dbebf5835fa5e21d2e2fd757adc35a",
+      "zone_id": "00509807996f64ff48b75c82936f0777",
+      "zone_name": "markingall.com",
+      "name": "www.markingall.com",
+      "type": "CNAME",
+      "content": "markingall.com",
+      "proxiable": true,
+      "proxied": true,
+      "ttl": 1,
+      "locked": false,
+      "meta": {
+        "auto_added": false,
+        "managed_by_apps": false,
+        "managed_by_argo_tunnel": false,
+        "source": "primary"
+      },
+      "created_on": "2022-01-08T03:33:27.769015Z",
+      "modified_on": "2022-01-10T23:21:50.206011Z"
+    }
+  ],
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result_info": {
+    "page": 1,
+    "per_page": 100,
+    "count": 37,
+    "total_count": 37,
+    "total_pages": 1
+  }
+}

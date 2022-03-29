@@ -13,22 +13,16 @@ def lista_dns(IDNS=os.getenv('ID_DNS'),EMAIL=os.getenv('EMAIL'),KEY=os.getenv('K
     headers["Content-Type"] = "application/json"
     resp = requests.get(url, headers=headers)
     respuesta=json.loads(resp.text)
-    for r in respuesta["result"]:
-        a=(r["name"][:r["name"].index(".")])
-        list.append(a)
-    return list
-ListaDns=lista_dns()
-LocationFile=f"{os.getenv('MMHOME')}/settings/InstaPruebas.csv"
-df=pd.read_csv(LocationFile, header=None)
+    # for r in respuesta["result"]:
+    #     a=(r["name"][:r["name"].index(".")])
+    #     list.append(a)
+    # return list
+    print(resp)
+print(lista_dns())
+# ListaDns=lista_dns()
+# LocationFile=f"{os.getenv('MMHOME')}/settings/InstaPruebas.csv"
+# df=pd.read_csv(LocationFile, header=None)
 
-ElementListCsv=df[1].values
 
-for i in ElementListCsv:
-    iteracion=os.path.exists(f'/etc/nginx/sites-available/{i}')
-    EstaEnDns=i in ListaDns
-    if (iteracion or EstaEnDns):
-        print(i) 
-    else:
-        print(f"no esta {i}")
-    
+
 
