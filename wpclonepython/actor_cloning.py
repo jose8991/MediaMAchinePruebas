@@ -3,6 +3,7 @@ import pandas as pd
 import os ,json, requests
 from requests.structures import CaseInsensitiveDict
 from dotenv import load_dotenv
+
 #add dns subdomain names to a list
 def lista_dns(IDNS=os.getenv('ID_DNS'),EMAIL=os.getenv('EMAIL'),KEY=os.getenv('KEY')):
     list=[]
@@ -18,11 +19,12 @@ def lista_dns(IDNS=os.getenv('ID_DNS'),EMAIL=os.getenv('EMAIL'),KEY=os.getenv('K
         list.append(a)
     return list
 ListaDns=lista_dns()
+#agregamos los elemetos del csv en la lista
 LocationFile=f"{os.getenv('MMHOME')}/settings/InstaPruebas.csv"
 df=pd.read_csv(LocationFile, header=None)
-
 ElementListCsv=df[1].values
 
+#iteramos todos los elementos de la lista csv y los que no existen llamamos la funcion new_wordpresss para crear el wordpress
 for i in ElementListCsv:
     iteracion=os.path.exists(f'/etc/nginx/sites-available/{i}')
     EstaEnDns=i in ListaDns

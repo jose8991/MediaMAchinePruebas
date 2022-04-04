@@ -23,6 +23,4 @@ else
   echo $col2 
 fi
  
-done < $MMHOME/settings/InstaPruebas.csv 
-
-
+done < $MMHOME/settings/InstaPruebasActor.csv
