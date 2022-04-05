@@ -30,10 +30,8 @@ for i in ElementListCsv:
     iteracion=os.path.exists(f'/etc/nginx/sites-available/{i}')
     EstaEnDns=i in ListaDns
     if (iteracion or EstaEnDns):
-        #print(i) 
-        pass
+        print(i) 
     else:
-        print(i)
         funcion_new_wordpress.new_wordpress(i,"Jose123-")  
     
 

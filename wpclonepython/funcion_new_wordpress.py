@@ -13,10 +13,6 @@ def new_wordpress(NAME,PASSWORD):
     PORT="80"
     BLOGNAME="TituloGenerico"
     BLOGDESC="descripcionGenerica"
-<<<<<<< HEAD
-
-=======
->>>>>>> 962c0e5055eb2d0e5874d4ff0f53a03e91fb3ee2
     conexion = mysql.connector.connect(user=os.getenv('WP_DB_USER'), password=os.getenv('WP_DB_PWD'), host=os.getenv('WP_DB_HOST'))
     url = f"https://api.cloudflare.com/client/v4/zones/{os.getenv('ID_DNS')}/dns_records"
     headers = CaseInsensitiveDict()
@@ -26,10 +22,7 @@ def new_wordpress(NAME,PASSWORD):
     data = f"""{{"type":"A","name":"{NAME}","content":"{os.getenv('IP')}","ttl":3600,"priority":10,"proxied":true}}"""
 
     if (int(os.getenv('ENPRODUCCION')) > 0):
-<<<<<<< HEAD
         print("entro al if")
-=======
->>>>>>> 962c0e5055eb2d0e5874d4ff0f53a03e91fb3ee2
         server=(f"{NAME}.{os.getenv('DOMAIN')}") 
         opval=(f"https://{server}")
         resp = requests.post(url, headers=headers, data=data)
@@ -44,11 +37,7 @@ def new_wordpress(NAME,PASSWORD):
     # #Sacar las URL, EMAIL, KEY, IP para que estén envvars.sh y acá usar las variables
 
     shutil.copy(f"{os.getenv('MMHOME')}/wpclone/origin", f"/etc/nginx/sites-available/{NAME}")
-<<<<<<< HEAD
     print("copio el origin")
-=======
-
->>>>>>> 962c0e5055eb2d0e5874d4ff0f53a03e91fb3ee2
     with open(f"/etc/nginx/sites-available/{NAME}", 'r') as file :
       filedata = file.read()
     filedata = filedata.replace('{{port}}', PORT)
@@ -72,7 +61,6 @@ def new_wordpress(NAME,PASSWORD):
     curso1.execute(f"CREATE USER '{NAME}'@'{os.getenv('WP_DB_HOST')}' IDENTIFIED BY '{os.getenv('WP_DB_PWD')}'")
     curso1.execute(f"GRANT ALL PRIVILEGES ON {NAME}.* TO {NAME}@{os.getenv('WP_DB_HOST')}")
     curso1.execute("FLUSH PRIVILEGES")
-<<<<<<< HEAD
     
     print("creo la base de datos correctamente")
     if (SOURCE != 'generic'):
@@ -89,20 +77,6 @@ def new_wordpress(NAME,PASSWORD):
     conexion.close() 
     shutil.copytree(f"{os.getenv('MMHOME')}/wpclone/wordpresscontent/generic/", f"/var/www/{NAME}")
     print("entro al copiado de contemifo")
-=======
-    conexion.close()  
-
-    if (SOURCE != 'generic'):
-    
-      os.system(f"mysqldump  -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} --no-create-db {SOURCE} --single-transaction --compress --order-by-primary | mysql -u{os.getenv('WP_DB_USER')} -p{os.getenv('WP_DB_PWD')} {NAME}")
-      curso2=conexion.cursor()
-      curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{opval}' WHERE option_name in ('home','siteurl')")
-      curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{BLOGNAME}' WHERE option_name in ('blogname')")
-      curso2.execute(f"UPDATE {NAME}.wp_options SET option_value='{BLOGDESC}' WHERE option_name in ('blogdescription')")
-      conexion.close()
-
-    shutil.copytree(f"{os.getenv('MMHOME')}/wpclone/wordpresscontent/generic/", f"/var/www/{NAME}")
->>>>>>> 962c0e5055eb2d0e5874d4ff0f53a03e91fb3ee2
     shutil.copy(f"{os.getenv('MMHOME')}/wpclone/wordpresscontent/generic/wp-config.php", f"/var/www/{NAME}")
 
 
