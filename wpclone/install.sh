@@ -16,7 +16,10 @@ apt-get install php-fpm -y
 apt-get install mysql-server php-mysql -y
 sudo apt install php-fpm php-common php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl -y
 sudo apt-get install jq
-
+python -m pip install python-dotenv
+python -m pip install requests
+pip install mysql-connector
+pip install mysql-connector-python
 
 echo "yes" | git clone --branch testfunction git@github.com:jfernandrezj/media_machine.git
 ##1
