@@ -3,6 +3,7 @@ import pandas as pd
 import os ,json, requests
 from requests.structures import CaseInsensitiveDict
 from dotenv import load_dotenv
+import funcion_new_wordpress
 
 #add dns subdomain names to a list
 def lista_dns(IDNS=os.getenv('ID_DNS'),EMAIL=os.getenv('EMAIL'),KEY=os.getenv('KEY')):
@@ -20,7 +21,7 @@ def lista_dns(IDNS=os.getenv('ID_DNS'),EMAIL=os.getenv('EMAIL'),KEY=os.getenv('K
     return list
 ListaDns=lista_dns()
 #agregamos los elemetos del csv en la lista
-LocationFile=f"{os.getenv('MMHOME')}/settings/InstaPruebas.csv"
+LocationFile=f"{os.getenv('MMHOME')}/settings/InstaPruebasActor.csv"
 df=pd.read_csv(LocationFile, header=None)
 ElementListCsv=df[1].values
 
@@ -31,6 +32,6 @@ for i in ElementListCsv:
     if (iteracion or EstaEnDns):
         print(i) 
     else:
-        print(f"no esta {i}")
+        funcion_new_wordpress.new_wordpress(i,"Jose123-")  
     
 

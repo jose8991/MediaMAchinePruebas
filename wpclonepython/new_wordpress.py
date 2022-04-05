@@ -8,7 +8,7 @@ import mysql.connector
 
 NAME=sys.argv[1]
 PASSWORD=sys.argv[2]
-SOURCE="generic"
+SOURCE="plugins"
 PORT="80"
 BLOGNAME="TituloGenerico"
 BLOGDESC="descripcionGenerica"
