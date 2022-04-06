@@ -20,14 +20,12 @@ def lista_dns(IDNS=os.getenv('ID_DNS'),EMAIL=os.getenv('EMAIL'),KEY=os.getenv('K
         list.append(a)
     return list
 ListaDns=lista_dns()
-print("guardo dns correctamente en la lista")
-#agregamos los elemetos del csv en la lista
-LocationFile=f"{os.getenv('MMHOME')}/settings/InstaPruebasActor.csv"
+#we add the elements of the csv in the list
+LocationFile=f"{os.getenv('MMHOME')}/settings/insta_wp_map.csv"
 df=pd.read_csv(LocationFile, header=None)
 ElementListCsv=df[1].values
-print("leyo correctamente el archivo csv")
 
-#iteramos todos los elementos de la lista csv y los que no existen llamamos la funcion new_wordpresss para crear el wordpress
+#we iterate all the elements of the csv list and those that do not exist we call the new_wordpresss function to create the wordpress
 for i in ElementListCsv:
     print("entro correctamente al ciclo for")
     iteracion=os.path.exists(f'/etc/nginx/sites-available/{i}')

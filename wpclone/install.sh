@@ -20,7 +20,10 @@ python -m pip install python-dotenv
 python -m pip install requests
 pip install mysql-connector
 pip install mysql-connector-python
-
+#permisos de ejecucion
+#chmod g+w -R /var/www/
+#cambiar de usuario 
+#sudo chown <usuario> -R <carpeta> (carpeta y todo su contenido)
 echo "yes" | git clone --branch testfunction git@github.com:jfernandrezj/media_machine.git
 ##1
 sudo mysql -u$WP_DB_USER -p$WP_DB_PWD -e "create database plugins;"

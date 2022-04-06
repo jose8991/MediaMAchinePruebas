@@ -1,1 +1,0 @@
-curl -X GET "https://api.cloudflare.com/client/v4/zones/$ID_DNS/dns_records"      -H "X-Auth-Email: $EMAIL"      -H "X-Auth-Key: $KEY"      -H "Content-Type: application/json" | jq > dns.json
